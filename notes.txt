@@ -1,0 +1,40 @@
+FORMIK AND VALIDATION 
+ objectives 
+        1. leern how to create and validate forms wwith Formik and Yup
+
+validation - is an automatic check to ensure that data enntered is sesnsible and feasable.
+form - a HTML form is used to collect user input. 
+the user input is most often sent to a server for processing.
+
+FORMIK
+formik is a react library that makes working with forms easy for us.
+
+
+SIGN UP FORMIK
+
+the form will inlcude inout fiels for email and name and age.
+under the form there is a table that reflects what is stores in the database.
+
+in SignUp.js file whcih contains the sign up form component.
+
+the formik library provides us a hook to give initial values to the form and write a onSubmit callback fucntion to do something witht he values that were 
+submitted.
+we can use the onSubmit method to submit send the vlaues and store the values in the database.
+to do validation we can define  a validation schema.
+
+
+
+VALIDATIONS
+for validation we will use the YUP librarby that meshes well with Formik. Yup 
+is a schema builder for runtime parsing and validation
+
+yup allows us to instntiate an objetct and define its shape fucniton which takes in an object od the 
+fields we want to validate.
+we can chaim validation rules to create complec and strict validation rules that allows us to control input and create more robust applications.
+
+Looking at the age schema as an example. we want ot accept a number()
+which is positive() and is an integer(). we alsoe want to make sure it is required() yup makes error messafes easy to define.
+we can pass the error messafe we ewant to display in the broken rule by apssing a trign into the rule defination like we did here required('Must enter age")
+
+we can access these errors in the JSX by using the formik hooks error attributes <p style={{color:'red'}}> {formik.errors.name}</p>   
+in this example we show the validation errors as a red <p> tag.
